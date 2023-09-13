@@ -39,10 +39,7 @@ server = app.server
 n1 = "001"
 #==================== Layout ====================
 app.layout = html.Div([
-        dbc.Navbar(
-        html.Div(
-            [
-                html.A(
+                dbc.Navbar(
                     # Use row and col to control vertical alignment of logo / brand
                     dbc.Row(
                         [
@@ -57,83 +54,28 @@ app.layout = html.Div([
                                     width="auto",
                             ),
                         ],
-                        
                     ),
-                    href="",
+                    
                     style={"textDecoration": "none"},
+                    color="dark",
+                    dark=True,
                 ),
                 
-            ],style={'align':'left'},
-        ),
-        color="dark",
-    dark=True,
-    ),
-    dbc.Row([
-        dbc.Col([
-            dbc.Card(
-                [
-                    html.Img(src=app.get_asset_url('logo_kelan2.png'),style={"display": "flex", "justify-content": "center","lenght":"50%", "width":"70%"}),
-                    #ThemeSwitchAIO(aio_id="theme", themes=[url_theme1, url_theme2]),
-                    html.Hr(),
+            ],style={'align':'left','overflowY': 'scroll', 'height': '300px', 'border': '1px solid black'}
+        )
+
+                
+        #html.Img(src=app.get_asset_url('logo_kelan2.png'),style={"display": "flex", "justify-content": "center","lenght":"50%", "width":"70%"}),
+        #ThemeSwitchAIO(aio_id="theme", themes=[url_theme1, url_theme2]),
+        #html.Hr(),
+
                     
-                ], style={"margin": "20px", "padding": "20px", "height": "86vh"})
-        ], md=3),
-        dbc.Col([
-            dbc.Row([
-                dbc.Card([
-                html.H4("Menu Principal")
-                ], style={"margin": "20px", "padding": "20px"})
-            ]),
-            dbc.Row([
-                dbc.Row([
-                    dbc.Row([
-                        dbc.Col([
-                            dbc.Card([
-                                html.H3("Escala"),
-                                html.Hr(),
-                                html.P(n1)
-                            ], style={"margin": "20px", "padding": "20px", "color":"primary", "inverse":"True","width": "18rem","height":"10rem"}),
-                            dbc.Card([
-                                html.H3("Escala"),
-                                html.Hr(),
-                                html.P(n1)
-                            ], style={"margin": "20px", "padding": "20px", "color":"primary", "inverse":"True","width": "18rem","height":"10rem"})
-                        ]),
-                        dbc.Col([
-                            dbc.Card([
-                                html.H3("Escala"),
-                                html.Hr(),
-                                html.P(n1)
-                            ], style={"margin": "20px", "padding": "20px", "color":"primary", "inverse":"True","height":"10rem"},id="graph1"),
-                            dbc.Card([
-                                html.H3("Escala"),
-                                html.Hr(),
-                                html.P(n1)
-                            ], style={"margin": "20px", "padding": "20px", "color":"primary", "inverse":"True","height":"10rem"},id="graph2")
-                        ],sm=8),
-                    ]),
-                    dbc.Row([
-                        dbc.Col([
-                        html.P("Linha do Tempo"),
-                        html.Hr(),
-                        dbc.Card([
-                            html.P(n1)
-                        ], style={"margin": "20px", "padding": "20px","color":"primary", "inverse":"True"},id="graph3"),
-                        dbc.Card([
-                        html.P(n1)
-                        ], style={"margin": "20px", "padding": "20px","color":"primary", "inverse":"True"}, id="graph4"),
-                        ],sm=12)
-                    ])
-                ]),
-                dbc.Row([
-                        
-                    ])
-                ])
-            ],sm=9),
-        ])
-    ])
+
 #, style={"display": "flex", "justify-content": "top"}
 #============ Call Backs ===============
+# DropDawn
+
+
 
 
 
